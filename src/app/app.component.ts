@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = '1PF_ballon-fox';
+export class AppComponent implements OnInit {
+  constructor() {}
+
+  formulario = true;
+
+  abrirFormulario(value: any) {
+    this.formulario = value;
+  }
+  ngOnInit(): void {}
 }
